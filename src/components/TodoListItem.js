@@ -6,12 +6,12 @@ import {
 } from 'react-icons/md';
 import './TodoListItem.scss';
 
-const TodoListItem = () => {
+const TodoListItem = ({ text, checked }) => {
   return (
     <div className='TodoListItem'>
-      <div className='checkbox'>
-        <MdCheckBoxOutlineBlank />
-        <div className='text'>할 일</div>
+      <div className={['checkbox', checked ? 'checked' : ''].join(' ')}>
+        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+        <div className='text'>{text}</div>
       </div>
       <div className='remove'>
         <MdRemoveCircleOutline />
