@@ -1,5 +1,20 @@
 .TodoList {
-  min-height: 320px;
+  position: relative;
+  min-height: 420px;
   max-height: 513px;
   overflow-y: auto;
+  b {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(87, 84, 84, 0.4);
+    transition: all 1s ease-out;
+    &:hover {
+      color: rgba(148, 142, 142, 0.4);
+    }
+  }
 }
